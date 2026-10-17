@@ -1,4 +1,5 @@
 import 'package:flutter/foundation.dart';
+
 import '../models/campus_menu.dart';
 import '../repositories/campus_menu_repository.dart';
 
@@ -20,13 +21,34 @@ class OrderViewModel extends ChangeNotifier {
     completed = false;
     notifyListeners();
   }
+
   void changeQuantity(int delta) {
-    quantity = (quantity + delta).clamp(1, 10);
+    quantity = (quantity + delta).clamp(1, 10).toInt();
     notifyListeners();
   }
-  void setSpice(String value) { spice = value; notifyListeners(); }
-  void setPickup(String value) { pickup = value; notifyListeners(); }
-  void setPayment(String value) { payment = value; notifyListeners(); }
-  void setDrink(bool value) { includeDrink = value; notifyListeners(); }
-  void confirm() { completed = true; notifyListeners(); }
+
+  void setSpice(String value) {
+    spice = value;
+    notifyListeners();
+  }
+
+  void setPickup(String value) {
+    pickup = value;
+    notifyListeners();
+  }
+
+  void setPayment(String value) {
+    payment = value;
+    notifyListeners();
+  }
+
+  void setDrink(bool value) {
+    includeDrink = value;
+    notifyListeners();
+  }
+
+  void confirm() {
+    completed = true;
+    notifyListeners();
+  }
 }
