@@ -26,19 +26,19 @@ class HomeHero extends StatelessWidget {
   final VoidCallback onOrder;
   @override
   Widget build(BuildContext context) => ClipRRect(borderRadius: BorderRadius.circular(Space.cardRadius),
-    child: Container(height: Space.hero, color: AppColors.primary, child: Stack(children: [
-      Positioned.fill(child: Image.asset('assets/figma/home_00.png', fit: BoxFit.cover)),
-      Positioned.fill(child: ColoredBox(color: AppColors.primary.withValues(alpha: 0.78))),
-      Padding(padding: Space.padding, child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        const StatusPill('FLASH DEAL ⚡', color: AppColors.brown, background: AppColors.peach),
+    child: Container(color: AppColors.primary, padding: Space.padding, child: Row(children: [
+      Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        const StatusPill('FLASH DEAL ⚡', color: AppColors.surface, background: AppColors.brown),
         Space.gap,
-        Text('Promo Mahasiswa 25%', style: Theme.of(context).textTheme.headlineSmall?.copyWith(color: AppColors.surface)),
+        Text('Promo Mahasiswa 25%', style: Theme.of(context).textTheme.titleMedium?.copyWith(color: AppColors.surface)),
         Text('Paket Komplit: Geprek + Es Teh…', style: Theme.of(context).textTheme.bodySmall?.copyWith(color: AppColors.surface)),
-        const Spacer(), Row(children: [const DesignIcon('home_14.svg'), Space.rowGap,
+        Space.gap, Row(children: [const DesignIcon('home_14.svg'), Space.rowGap,
           Text('KAMPUSKENYANG', style: Theme.of(context).textTheme.labelMedium?.copyWith(color: AppColors.surface)),
-          const Spacer(), TextButton(onPressed: onOrder, child: Text('Pesan Sekarang',
-            style: Theme.of(context).textTheme.labelMedium?.copyWith(color: AppColors.surface)))]),
-      ])),
+        ]),
+      ])), Space.rowGap,
+      Semantics(button: true, label: 'Pesan Sekarang', child: InkWell(onTap: onOrder,
+        child: ClipRRect(borderRadius: BorderRadius.circular(Space.radius),
+          child: Image.asset('assets/figma/home_00.png', width: Space.heroPhoto, height: Space.heroPhoto, fit: BoxFit.cover)))),
     ])));
 }
 

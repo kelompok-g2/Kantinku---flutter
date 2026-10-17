@@ -14,7 +14,7 @@ abstract final class Space {
   static const tiny = 4.0, small = 8.0, medium = 12.0, page = 16.0;
   static const large = 20.0, section = 24.0, roomy = 32.0, wide = 40.0;
   static const button = 48.0, avatar = 36.0, logo = 80.0;
-  static const hero = 176.0, card = 168.0, photo = 128.0;
+  static const hero = 128.0, heroPhoto = 96.0, card = 168.0, photo = 128.0;
   static const detailPhoto = 260.0, desktopWidth = 460.0;
   static const radius = 12.0, cardRadius = 16.0, pill = 99.0;
   static const hairline = 1.0, line = 1.5, icon = 20.0;

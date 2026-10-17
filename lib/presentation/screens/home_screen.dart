@@ -4,6 +4,7 @@ import '../../models/campus_menu.dart';
 import '../../repositories/campus_menu_repository.dart';
 import '../theme/app_theme.dart';
 import '../widgets/design_icon.dart';
+import '../widgets/completed_order_review.dart';
 import '../widgets/home_header.dart';
 import '../widgets/home_navigation.dart';
 import '../widgets/menu_card.dart';
@@ -66,6 +67,7 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [for (final menu in CampusMenuRepository.menus.take(3)) Padding(
               padding: const EdgeInsets.only(right: Space.medium), child: MenuCard(menu: menu, onTap: () => _open(menu)))]))),
           Space.block,
+          const CompletedOrderReview(), Space.block,
           SectionHeading('Rekomendasi Untukmu', key: _menuKey), Space.gap,
           if (menus.isEmpty) const SectionCard(child: Text('Belum ada menu untuk pencarian ini. Coba kata atau kategori lain.')),
           for (final menu in menus) Padding(padding: const EdgeInsets.only(bottom: Space.medium),
