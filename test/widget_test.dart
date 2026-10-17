@@ -20,7 +20,7 @@ void main() {
     await tester.tap(find.text('Masuk ke KantinKu'));
     await tester.pumpAndSettle();
     expect(find.text('Halo, Dimas Pratama! 👋'), findsOneWidget);
-    await tester.tap(find.text('Pesan Sekarang'));
+    await tester.tap(find.bySemanticsLabel('Pesan Sekarang'));
     await tester.pumpAndSettle();
     expect(find.text('Detail Menu'), findsOneWidget);
     await tester.tap(find.textContaining('Pesan Sekarang •'));
