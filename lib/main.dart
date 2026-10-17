@@ -1,71 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'navigation/app_router.dart';
+import 'presentation/theme/app_theme.dart';
+import 'viewmodels/order_viewmodel.dart';
 
-import 'views/menu_view.dart';
+void main() => runApp(const KantinKuApp());
 
-void main() {
-  runApp(const KantinKuApp());
+class KantinKuApp extends StatefulWidget {
+  const KantinKuApp({super.key});
+  @override
+  State<KantinKuApp> createState() => _KantinKuAppState();
 }
 
-class KantinKuApp extends StatelessWidget {
-  const KantinKuApp({super.key});
-
+class _KantinKuAppState extends State<KantinKuApp> {
+  final order = OrderViewModel();
+  late final GoRouter router = createAppRouter(order);
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'KantinKu',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
-        useMaterial3: true,
-      ),
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.green,
-          title: const Text('KantinKu'),
-        ),
-        body: Builder(
-          builder: (context) {
-            return Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Icon(
-                    Icons.restaurant_menu,
-                    size: 80,
-                    color: Colors.green,
-                  ),
-                  const SizedBox(height: 20),
-                  const Text(
-                    'Selamat Datang di KantinKu',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                  ),
-                  const SizedBox(height: 10),
-                  const Text(
-                    'Aplikasi Pemesanan Makanan Kantin Kampus',
-                    textAlign: TextAlign.center,
-                  ),
-                  const SizedBox(height: 20),
-                  const Text('Starter Project Flutter - MVVM'),
-                  const SizedBox(height: 24),
-                  ElevatedButton.icon(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const MenuView(),
-                        ),
-                      );
-                    },
-                    icon: const Icon(Icons.restaurant_menu),
-                    label: const Text('Lihat Menu Kantin'),
-                  ),
-                ],
-              ),
-            );
-          },
-        ),
-      ),
-    );
-  }
+  void dispose() { router.dispose(); order.dispose(); super.dispose(); }
+  @override
+  Widget build(BuildContext context) => MaterialApp.router(
+    title: 'KantinKu', debugShowCheckedModeBanner: false,
+    theme: buildAppTheme(), routerConfig: router,
+    builder: (context, child) => ColoredBox(color: AppColors.background,
+      child: Center(child: ConstrainedBox(
+        constraints: const BoxConstraints(maxWidth: Space.desktopWidth), child: child))),
+  );
 }
