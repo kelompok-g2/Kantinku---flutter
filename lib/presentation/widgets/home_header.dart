@@ -126,32 +126,27 @@ class StandStatus extends StatelessWidget {
       children: [
         Text('STATUS STAND KANTIN HARI INI', style: Theme.of(context).textTheme.labelSmall),
         Space.gap,
-        Row(
+        Wrap(
+          spacing: Space.medium,
+          runSpacing: Space.small,
           children: [
             for (final (name, status) in [
               ('Kantin Bu Siti', '● Buka'),
               ('Geprek Juara', '● Buka'),
               ('Kopi Kencana', '● Ramai'),
             ])
-              Expanded(
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: Text(
-                        name,
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        style: Theme.of(context).textTheme.labelSmall,
-                      ),
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(name, style: Theme.of(context).textTheme.labelSmall),
+                  Space.rowGap,
+                  Text(
+                    status,
+                    style: Theme.of(context).textTheme.labelSmall?.copyWith(
+                      color: status.contains('Ramai') ? AppColors.brown : AppColors.green,
                     ),
-                    Text(
-                      status,
-                      style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                        color: status.contains('Ramai') ? AppColors.brown : AppColors.green,
-                      ),
-                    ),
-                  ],
-                ),
+                  ),
+                ],
               ),
           ],
         ),
