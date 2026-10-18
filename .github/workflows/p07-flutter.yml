@@ -18,6 +18,8 @@ jobs:
   verify-and-build:
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    env:
+      GRADLE_OPTS: -Dorg.gradle.daemon=false
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
@@ -55,7 +57,7 @@ jobs:
           arch: x86_64
           target: default
           profile: Nexus 5X
-          ram-size: 2048M
+          ram-size: 1536M
           disk-size: 2048M
           disable-animations: true
           emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none -camera-front none -no-snapshot
@@ -63,7 +65,7 @@ jobs:
             adb shell wm size 390x884
             adb shell wm density 160
             adb shell settings put system screen_off_timeout 2147483647
-            flutter drive --driver=test_driver/evidence_driver.dart --target=integration_test/app_flow_test.dart -d emulator-5554
+            timeout --signal=INT 480s flutter drive --no-pub --driver=test_driver/evidence_driver.dart --target=integration_test/app_flow_test.dart -d emulator-5554
       - name: Save Android screenshots and video
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
