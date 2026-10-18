@@ -9,7 +9,7 @@ Future<void> main() async {
     'shell',
     'screenrecord',
     '--time-limit',
-    '125',
+    '150',
     '--size',
     '384x864',
     '--bit-rate',
@@ -29,7 +29,7 @@ Future<void> main() async {
     },
     writeResponseOnFailure: true,
     responseDataCallback: (data) async {
-      final exit = await record.exitCode.timeout(const Duration(seconds: 150));
+      final exit = await record.exitCode.timeout(const Duration(seconds: 180));
       await File('${directory.path}/screenrecord.log')
           .writeAsString(utf8.decode(errors, allowMalformed: true));
       final pull = await Process.run('adb', [
@@ -49,7 +49,7 @@ Future<void> main() async {
           'pull_exit': pull.exitCode,
         }),
       );
-      if (exit != 0 || pull.exitCode != 0 || names.length != 5) {
+      if (exit != 0 || pull.exitCode != 0 || names.length != 7) {
         throw StateError(
           'Android evidence incomplete: ${names.length} screenshots, video $exit/${pull.exitCode}',
         );
