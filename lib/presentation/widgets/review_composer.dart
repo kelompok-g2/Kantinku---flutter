@@ -68,9 +68,7 @@ class _ReviewComposerState extends State<ReviewComposer> {
             child: OutlinedButton(
               onPressed: () => ScaffoldMessenger.of(context).showSnackBar(
                 const SnackBar(
-                  content: Text(
-                    'Unggah foto tersedia setelah penyimpanan media terhubung.',
-                  ),
+                  content: Text('Unggah foto tersedia setelah penyimpanan media terhubung.'),
                 ),
               ),
               child: const Column(
@@ -93,21 +91,12 @@ class _ReviewComposerState extends State<ReviewComposer> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  'Dimas Pratama',
-                  style: Theme.of(context).textTheme.labelMedium,
-                ),
-                Text(
-                  'Teknik Komputer ’21',
-                  style: Theme.of(context).textTheme.bodySmall,
-                ),
+                Text('Dimas Pratama', style: Theme.of(context).textTheme.labelMedium),
+                Text('Teknik Komputer ’21', style: Theme.of(context).textTheme.bodySmall),
               ],
             ),
           ),
-          Switch(
-            value: _anonymous,
-            onChanged: (value) => setState(() => _anonymous = value),
-          ),
+          Switch(value: _anonymous, onChanged: (value) => setState(() => _anonymous = value)),
         ],
       ),
       Text(
@@ -122,9 +111,7 @@ class _ReviewComposerState extends State<ReviewComposer> {
             DesignIcon('home_28.svg'),
             Space.rowGap,
             Expanded(
-              child: Text(
-                'Klaim Hadiah Review\nDapatkan voucher untuk pesanan berikutnya!',
-              ),
+              child: Text('Klaim Hadiah Review\nDapatkan voucher untuk pesanan berikutnya!'),
             ),
           ],
         ),

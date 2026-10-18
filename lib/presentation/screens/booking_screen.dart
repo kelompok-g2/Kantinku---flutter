@@ -26,10 +26,7 @@ class BookingScreen extends StatelessWidget {
           children: [
             Row(
               children: [
-                Text(
-                  'ID Pesanan #KTK-89242',
-                  style: Theme.of(context).textTheme.bodySmall,
-                ),
+                Text('ID Pesanan #KTK-89242', style: Theme.of(context).textTheme.bodySmall),
                 const Spacer(),
                 const StatusPill(
                   '⏱ 10–15 menit',
@@ -100,16 +97,10 @@ class BookingScreen extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                'TOTAL SIAP BAYAR',
-                style: Theme.of(context).textTheme.labelSmall,
-              ),
+              Text('TOTAL SIAP BAYAR', style: Theme.of(context).textTheme.labelSmall),
               Row(
                 children: [
-                  Text(
-                    rupiah(order.total),
-                    style: Theme.of(context).textTheme.headlineSmall,
-                  ),
+                  Text(rupiah(order.total), style: Theme.of(context).textTheme.headlineSmall),
                   const Spacer(),
                   StatusPill('Hemat ${rupiah(order.discount)}'),
                 ],

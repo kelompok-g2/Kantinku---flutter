@@ -27,8 +27,7 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   void _message(String message) =>
-      ScaffoldMessenger.of(context)
-          .showSnackBar(SnackBar(content: Text(message)));
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(message)));
   void _login() {
     if (_form.currentState!.validate()) context.go('/home');
   }
@@ -56,11 +55,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       padding: const EdgeInsets.all(Space.small),
                       child: Image.asset('assets/figma/login_00.png'),
                     ),
-                    const Positioned(
-                      right: 0,
-                      bottom: 0,
-                      child: DesignIcon('login_02.svg'),
-                    ),
+                    const Positioned(right: 0, bottom: 0, child: DesignIcon('login_02.svg')),
                   ],
                 ),
                 Space.gap,
@@ -103,9 +98,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       ])
                         Expanded(
                           child: Material(
-                            color: _role == role
-                                ? AppColors.surface
-                                : AppColors.pale,
+                            color: _role == role ? AppColors.surface : AppColors.pale,
                             borderRadius: BorderRadius.circular(Space.radius),
                             child: InkWell(
                               borderRadius: BorderRadius.circular(Space.radius),
@@ -117,7 +110,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   children: [
                                     DesignIcon(icon),
                                     Space.rowGap,
-                                    Text(role, style: text.labelMedium),
+                                    Flexible(child: Text(role, style: text.labelMedium)),
                                   ],
                                 ),
                               ),
@@ -134,9 +127,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   controller: _email,
                   leading: const DesignIcon('login_05.svg'),
                   keyboardType: TextInputType.emailAddress,
-                  validator: (value) => value == null || value.trim().isEmpty
-                      ? 'Isi email atau NIM dulu.'
-                      : null,
+                  validator: (value) =>
+                      value == null || value.trim().isEmpty ? 'Isi email atau NIM dulu.' : null,
                 ),
                 Space.block,
                 LabeledField(
@@ -146,15 +138,12 @@ class _LoginScreenState extends State<LoginScreen> {
                   obscure: _hidden,
                   leading: const DesignIcon('login_06.svg'),
                   trailing: IconButton(
-                    tooltip: _hidden
-                        ? 'Tampilkan kata sandi'
-                        : 'Sembunyikan kata sandi',
+                    tooltip: _hidden ? 'Tampilkan kata sandi' : 'Sembunyikan kata sandi',
                     onPressed: () => setState(() => _hidden = !_hidden),
                     icon: const DesignIcon('login_07.svg'),
                   ),
-                  validator: (value) => value == null || value.length < 6
-                      ? 'Gunakan minimal 6 karakter.'
-                      : null,
+                  validator: (value) =>
+                      value == null || value.length < 6 ? 'Gunakan minimal 6 karakter.' : null,
                 ),
                 Space.gap,
                 Row(
@@ -163,17 +152,13 @@ class _LoginScreenState extends State<LoginScreen> {
                       width: Space.section,
                       child: Checkbox(
                         value: _remember,
-                        onChanged: (value) =>
-                            setState(() => _remember = value ?? false),
+                        onChanged: (value) => setState(() => _remember = value ?? false),
                       ),
                     ),
                     Space.rowGap,
-                    Text('Ingat saya', style: text.bodySmall),
-                    const Spacer(),
+                    Expanded(child: Text('Ingat saya', style: text.bodySmall)),
                     TextButton(
-                      onPressed: () => _message(
-                        'Hubungi admin kampus untuk mengatur ulang sandi.',
-                      ),
+                      onPressed: () => _message('Hubungi admin kampus untuk mengatur ulang sandi.'),
                       child: const Text('Lupa Password?'),
                     ),
                   ],
@@ -189,14 +174,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   children: [
                     const Expanded(child: Divider()),
                     Padding(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: Space.medium,
-                      ),
+                      padding: const EdgeInsets.symmetric(horizontal: Space.medium),
                       child: Text(
                         'ATAU MASUK DENGAN SSO KAMPUS',
-                        style: text.labelSmall?.copyWith(
-                          color: AppColors.muted,
-                        ),
+                        style: text.labelSmall?.copyWith(color: AppColors.muted),
                       ),
                     ),
                     const Expanded(child: Divider()),
@@ -204,9 +185,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 Space.block,
                 OutlinedButton(
-                  onPressed: () => _message(
-                    'SSO tersedia saat integrasi akun kampus diaktifkan.',
-                  ),
+                  onPressed: () => _message('SSO tersedia saat integrasi akun kampus diaktifkan.'),
                   style: OutlinedButton.styleFrom(
                     minimumSize: const Size.fromHeight(Space.button),
                     backgroundColor: AppColors.surface,
@@ -231,15 +210,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   children: [
                     Text('Belum punya akun?', style: text.bodySmall),
                     TextButton(
-                      onPressed: () => _message(
-                        'Pendaftaran akun mengikuti data civitas kampus.',
-                      ),
+                      onPressed: () => _message('Pendaftaran akun mengikuti data civitas kampus.'),
                       child: const Row(
                         mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Text('Daftar Akun Baru'),
-                          DesignIcon('login_10.svg'),
-                        ],
+                        children: [Text('Daftar Akun Baru'), DesignIcon('login_10.svg')],
                       ),
                     ),
                   ],
@@ -250,9 +224,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   children: [
                     const DesignIcon('login_11.svg'),
                     Space.rowGap,
-                    Text(
-                      'Terkoneksi aman dengan Jaringan Kampus',
-                      style: text.bodySmall,
+                    Flexible(
+                      child: Text('Terkoneksi aman dengan Jaringan Kampus', style: text.bodySmall),
                     ),
                   ],
                 ),

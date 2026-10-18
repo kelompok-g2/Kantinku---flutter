@@ -33,11 +33,8 @@ class HomeNavigation extends StatelessWidget {
                       Space.gap,
                       Text(
                         label,
-                        style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                          color: index == 0
-                              ? AppColors.primary
-                              : AppColors.muted,
-                        ),
+                        style: Theme.of(context).textTheme.labelSmall
+                            ?.copyWith(color: index == 0 ? AppColors.primary : AppColors.muted),
                       ),
                     ],
                   ),

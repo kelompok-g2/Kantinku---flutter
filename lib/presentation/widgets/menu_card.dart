@@ -6,12 +6,7 @@ import 'design_icon.dart';
 import 'section_card.dart';
 
 class MenuCard extends StatelessWidget {
-  const MenuCard({
-    super.key,
-    required this.menu,
-    required this.onTap,
-    this.compact = false,
-  });
+  const MenuCard({super.key, required this.menu, required this.onTap, this.compact = false});
   final CampusMenu menu;
   final VoidCallback onTap;
   final bool compact;
@@ -69,10 +64,7 @@ class MenuCard extends StatelessWidget {
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
       if (compact)
-        Text(
-          '★ ${menu.rating} • ${menu.stand}',
-          style: Theme.of(context).textTheme.bodySmall,
-        ),
+        Text('★ ${menu.rating} • ${menu.stand}', style: Theme.of(context).textTheme.bodySmall),
       Text(
         menu.name,
         maxLines: 2,
@@ -92,18 +84,14 @@ class MenuCard extends StatelessWidget {
           Expanded(
             child: Text(
               rupiah(menu.price),
-              style: Theme.of(context).textTheme.titleMedium
-                  ?.copyWith(color: AppColors.primary),
+              style: Theme.of(context).textTheme.titleMedium?.copyWith(color: AppColors.primary),
             ),
           ),
           if (!compact)
             Container(
               width: Space.roomy,
               height: Space.roomy,
-              decoration: const BoxDecoration(
-                color: AppColors.brown,
-                shape: BoxShape.circle,
-              ),
+              decoration: const BoxDecoration(color: AppColors.brown, shape: BoxShape.circle),
               child: const Center(child: DesignIcon('home_15.svg')),
             ),
         ],
@@ -116,12 +104,7 @@ class MenuCard extends StatelessWidget {
       children: [
         ClipRRect(
           borderRadius: BorderRadius.circular(Space.radius),
-          child: Image.asset(
-            menu.image,
-            width: Space.logo,
-            height: Space.logo,
-            fit: BoxFit.cover,
-          ),
+          child: Image.asset(menu.image, width: Space.logo, height: Space.logo, fit: BoxFit.cover),
         ),
         const SizedBox(width: Space.medium),
         Expanded(child: _text(context)),

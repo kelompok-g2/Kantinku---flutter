@@ -19,10 +19,7 @@ class BookingOptions extends StatelessWidget {
               children: [
                 const DesignIcon('confirmation_11.svg'),
                 Space.rowGap,
-                Text(
-                  'Waktu Pengambilan',
-                  style: Theme.of(context).textTheme.titleMedium,
-                ),
+                Text('Waktu Pengambilan', style: Theme.of(context).textTheme.titleMedium),
               ],
             ),
             Space.gap,
@@ -42,15 +39,18 @@ class BookingOptions extends StatelessWidget {
                 ])
                   ChoiceChip(
                     label: Text(label, textAlign: TextAlign.center),
-                    selected: order.pickup == value,
+                    selected:
+                        order.pickup == value ||
+                        (value == 'Atur Jam' && order.pickup.startsWith('Atur Jam ')),
                     onSelected: (_) async {
                       if (value == 'Atur Jam') {
                         final time = await showTimePicker(
                           context: context,
                           initialTime: const TimeOfDay(hour: 13, minute: 0),
                         );
-                        if (time != null && context.mounted)
+                        if (time != null && context.mounted) {
                           order.setPickup('Atur Jam ${time.format(context)}');
+                        }
                       } else {
                         order.setPickup(value);
                       }
@@ -58,10 +58,7 @@ class BookingOptions extends StatelessWidget {
                   ),
               ],
             ),
-            if (order.pickup.startsWith('Atur Jam ')) ...[
-              Space.gap,
-              Text(order.pickup),
-            ],
+            if (order.pickup.startsWith('Atur Jam ')) ...[Space.gap, Text(order.pickup)],
           ],
         ),
       ),
@@ -74,10 +71,7 @@ class BookingOptions extends StatelessWidget {
               children: [
                 const DesignIcon('confirmation_12.svg'),
                 Space.rowGap,
-                Text(
-                  'Metode Pembayaran',
-                  style: Theme.of(context).textTheme.titleMedium,
-                ),
+                Text('Metode Pembayaran', style: Theme.of(context).textTheme.titleMedium),
               ],
             ),
             Space.gap,
@@ -91,29 +85,14 @@ class BookingOptions extends StatelessWidget {
               child: Column(
                 children: [
                   for (final (value, subtitle, asset) in [
-                    (
-                      'QRIS Instant',
-                      'KantiPay / QRIS • Saldo Rp45.000',
-                      'confirmation_13.svg',
-                    ),
-                    (
-                      'GoPay',
-                      'Bayar dari dompet digitalmu',
-                      'confirmation_16.svg',
-                    ),
-                    (
-                      'Tunai',
-                      'Bayar saat ambil di stand',
-                      'confirmation_17.svg',
-                    ),
+                    ('QRIS Instant', 'KantiPay / QRIS • Saldo Rp45.000', 'confirmation_13.svg'),
+                    ('GoPay', 'Bayar dari dompet digitalmu', 'confirmation_16.svg'),
+                    ('Tunai', 'Bayar saat ambil di stand', 'confirmation_17.svg'),
                   ])
                     RadioListTile<String>(
                       contentPadding: EdgeInsets.zero,
                       title: Text(value),
-                      subtitle: Text(
-                        subtitle,
-                        style: Theme.of(context).textTheme.bodySmall,
-                      ),
+                      subtitle: Text(subtitle, style: Theme.of(context).textTheme.bodySmall),
                       secondary: DesignIcon(asset),
                       value: value,
                     ),
@@ -130,11 +109,7 @@ class BookingOptions extends StatelessWidget {
           children: [
             DesignIcon('confirmation_18.svg'),
             Space.rowGap,
-            Expanded(
-              child: Text(
-                'KAMPUSKENYANG\nHemat Rp5.000 untuk belanja minimal Rp20.000',
-              ),
-            ),
+            Expanded(child: Text('KAMPUSKENYANG\nHemat Rp5.000 untuk belanja minimal Rp20.000')),
           ],
         ),
       ),

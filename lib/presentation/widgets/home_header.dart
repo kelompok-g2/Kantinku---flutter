@@ -10,14 +10,10 @@ class HomeHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Container(
     color: AppColors.surface,
-    padding: Space.padding,
+    padding: const EdgeInsets.symmetric(horizontal: Space.page, vertical: Space.small),
     child: Row(
       children: [
-        Image.asset(
-          'assets/figma/home_09.png',
-          width: Space.roomy,
-          height: Space.roomy,
-        ),
+        Image.asset('assets/figma/home_09.png', width: Space.roomy, height: Space.roomy),
         Space.rowGap,
         Expanded(
           child: Column(
@@ -28,10 +24,7 @@ class HomeHeader extends StatelessWidget {
                 children: [
                   const DesignIcon('home_36.svg'),
                   Space.rowGap,
-                  Text(
-                    'Kantin Pusat FT UI',
-                    style: Theme.of(context).textTheme.bodySmall,
-                  ),
+                  Text('Kantin Pusat FT UI', style: Theme.of(context).textTheme.bodySmall),
                   Space.rowGap,
                   const DesignIcon('home_37.svg'),
                 ],
@@ -83,8 +76,7 @@ class HomeHero extends StatelessWidget {
                 ),
                 Text(
                   'Paket Komplit: Geprek + Es Teh…',
-                  style: Theme.of(context).textTheme.bodySmall
-                      ?.copyWith(color: AppColors.surface),
+                  style: Theme.of(context).textTheme.bodySmall?.copyWith(color: AppColors.surface),
                 ),
                 Space.gap,
                 Row(
@@ -128,13 +120,11 @@ class StandStatus extends StatelessWidget {
   const StandStatus({super.key});
   @override
   Widget build(BuildContext context) => SectionCard(
+    padding: const EdgeInsets.all(Space.small),
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          'STATUS STAND KANTIN HARI INI',
-          style: Theme.of(context).textTheme.labelSmall,
-        ),
+        Text('STATUS STAND KANTIN HARI INI', style: Theme.of(context).textTheme.labelSmall),
         Space.gap,
         Row(
           children: [
@@ -144,19 +134,21 @@ class StandStatus extends StatelessWidget {
               ('Kopi Kencana', '● Ramai'),
             ])
               Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                child: Row(
                   children: [
-                    Text(name, style: Theme.of(context).textTheme.labelSmall),
-                    Space.gap,
-                    StatusPill(
+                    Expanded(
+                      child: Text(
+                        name,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: Theme.of(context).textTheme.labelSmall,
+                      ),
+                    ),
+                    Text(
                       status,
-                      color: status.contains('Ramai')
-                          ? AppColors.brown
-                          : AppColors.green,
-                      background: status.contains('Ramai')
-                          ? AppColors.peach
-                          : AppColors.mint,
+                      style: Theme.of(context).textTheme.labelSmall?.copyWith(
+                        color: status.contains('Ramai') ? AppColors.brown : AppColors.green,
+                      ),
                     ),
                   ],
                 ),

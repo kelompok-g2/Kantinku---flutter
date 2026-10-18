@@ -17,11 +17,8 @@ GoRouter createAppRouter(OrderViewModel order) => GoRouter(
     GoRoute(
       path: '/menu/:id',
       redirect: (_, state) =>
-          const CampusMenuRepository().find(state.pathParameters['id']!) == null
-          ? '/home'
-          : null,
-      builder: (_, state) =>
-          _DetailRoute(order: order, id: state.pathParameters['id']!),
+          const CampusMenuRepository().find(state.pathParameters['id']!) == null ? '/home' : null,
+      builder: (_, state) => _DetailRoute(order: order, id: state.pathParameters['id']!),
     ),
     GoRoute(
       path: '/booking',

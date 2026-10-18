@@ -29,7 +29,8 @@ class CampusMenuRepository {
       price: 12000,
       image: 'assets/figma/home_03.png',
       category: 'Minuman Dingin',
-      description: 'Kopi susu creamy dengan manis gula aren. Teman segar untuk hari kuliah yang padat.',
+      description:
+          'Kopi susu creamy dengan manis gula aren. Teman segar untuk hari kuliah yang padat.',
       badge: 'Pilihanmu',
     ),
     CampusMenu(
@@ -39,8 +40,7 @@ class CampusMenuRepository {
       price: 14000,
       image: 'assets/figma/home_07.png',
       category: 'Makanan Berat',
-      description:
-          'Mie lembut dengan topping ayam gurih, bakso dan kuah hangat.',
+      description: 'Mie lembut dengan topping ayam gurih, bakso dan kuah hangat.',
       badge: 'Rekomendasi',
     ),
     CampusMenu(
@@ -65,9 +65,7 @@ class CampusMenuRepository {
       .where(
         (menu) =>
             (category == 'Semua' || menu.category == category) &&
-            '${menu.name} ${menu.stand}'.toLowerCase().contains(
-              query.toLowerCase(),
-            ),
+            '${menu.name} ${menu.stand}'.toLowerCase().contains(query.toLowerCase()),
       )
       .toList();
 }

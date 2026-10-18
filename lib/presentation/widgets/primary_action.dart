@@ -3,12 +3,7 @@ import 'package:flutter/material.dart';
 import '../theme/app_theme.dart';
 
 class PrimaryAction extends StatelessWidget {
-  const PrimaryAction({
-    super.key,
-    required this.label,
-    required this.onPressed,
-    this.trailing,
-  });
+  const PrimaryAction({super.key, required this.label, required this.onPressed, this.trailing});
   final String label;
   final VoidCallback? onPressed;
   final Widget? trailing;

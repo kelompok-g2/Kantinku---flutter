@@ -40,9 +40,7 @@ class LabeledField extends StatelessWidget {
         style: Theme.of(context).textTheme.bodyMedium,
         decoration: InputDecoration(
           hintText: hint,
-          prefixIcon: leading == null
-              ? null
-              : Padding(padding: Space.cardPadding, child: leading),
+          prefixIcon: leading == null ? null : Padding(padding: Space.cardPadding, child: leading),
           suffixIcon: trailing,
         ),
       ),

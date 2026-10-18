@@ -21,10 +21,7 @@ class BookingItems extends StatelessWidget {
           children: [
             const DesignIcon('confirmation_06.svg'),
             Space.rowGap,
-            Text(
-              'Pesanan Kamu',
-              style: Theme.of(context).textTheme.titleMedium,
-            ),
+            Text('Pesanan Kamu', style: Theme.of(context).textTheme.titleMedium),
           ],
         ),
         Space.block,
@@ -47,19 +44,10 @@ class BookingItems extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    order.menu.name,
-                    style: Theme.of(context).textTheme.titleSmall,
-                  ),
-                  Text(
-                    'Level: ${order.spice}',
-                    style: Theme.of(context).textTheme.bodySmall,
-                  ),
+                  Text(order.menu.name, style: Theme.of(context).textTheme.titleSmall),
+                  Text('Level: ${order.spice}', style: Theme.of(context).textTheme.bodySmall),
                   Space.gap,
-                  Text(
-                    rupiah(order.menu.price),
-                    style: Theme.of(context).textTheme.labelLarge,
-                  ),
+                  Text(rupiah(order.menu.price), style: Theme.of(context).textTheme.labelLarge),
                 ],
               ),
             ),
@@ -67,10 +55,7 @@ class BookingItems extends StatelessWidget {
         ),
         Align(
           alignment: Alignment.centerRight,
-          child: QuantityControl(
-            value: order.quantity,
-            onChanged: order.changeQuantity,
-          ),
+          child: QuantityControl(value: order.quantity, onChanged: order.changeQuantity),
         ),
         const Divider(),
         Row(
@@ -81,18 +66,9 @@ class BookingItems extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    'Es Teh Manis',
-                    style: Theme.of(context).textTheme.titleSmall,
-                  ),
-                  Text(
-                    'Normal • Dingin',
-                    style: Theme.of(context).textTheme.bodySmall,
-                  ),
-                  Text(
-                    rupiah(4000),
-                    style: Theme.of(context).textTheme.labelLarge,
-                  ),
+                  Text('Es Teh Manis', style: Theme.of(context).textTheme.titleSmall),
+                  Text('Normal • Dingin', style: Theme.of(context).textTheme.bodySmall),
+                  Text(rupiah(4000), style: Theme.of(context).textTheme.labelLarge),
                 ],
               ),
             ),

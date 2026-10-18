@@ -34,15 +34,9 @@ class ReviewAspects extends StatelessWidget {
                       children: [
                         DesignIcon(item.$3),
                         Space.gap,
-                        Text(
-                          item.$1,
-                          style: Theme.of(context).textTheme.labelMedium,
-                        ),
+                        Text(item.$1, style: Theme.of(context).textTheme.labelMedium),
                         Space.gap,
-                        Text(
-                          item.$2,
-                          style: Theme.of(context).textTheme.bodySmall,
-                        ),
+                        Text(item.$2, style: Theme.of(context).textTheme.bodySmall),
                       ],
                     ),
                   ),

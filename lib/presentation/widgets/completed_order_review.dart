@@ -25,12 +25,7 @@ class _CompletedOrderReviewState extends State<CompletedOrderReview> {
             children: [
               const DesignIcon('home_16.svg'),
               Space.rowGap,
-              Expanded(
-                child: Text(
-                  'Pesanan Selesai Dinikmati',
-                  style: text.titleSmall,
-                ),
-              ),
+              Expanded(child: Text('Pesanan Selesai Dinikmati', style: text.titleSmall)),
             ],
           ),
           Space.gap,
@@ -52,20 +47,12 @@ class _CompletedOrderReviewState extends State<CompletedOrderReview> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      'Paket Ayam Geprek Sambal Korek',
-                      style: text.titleSmall,
-                    ),
+                    Text('Paket Ayam Geprek Sambal Korek', style: text.titleSmall),
                     Row(
                       children: [
                         const DesignIcon('home_17.svg'),
                         Space.rowGap,
-                        Expanded(
-                          child: Text(
-                            'Stand 01 - Bu Siti (FTUI)',
-                            style: text.bodySmall,
-                          ),
-                        ),
+                        Expanded(child: Text('Stand 01 - Bu Siti (FTUI)', style: text.bodySmall)),
                       ],
                     ),
                     Text('Rp20.000 • 2 Menu', style: text.labelMedium),

@@ -32,11 +32,7 @@ ThemeData buildAppTheme() {
     color: AppColors.ink,
     fontWeight: FontWeight.w800,
   );
-  const body = TextStyle(
-    fontFamily: 'Inter',
-    color: AppColors.body,
-    height: 1.5,
-  );
+  const body = TextStyle(fontFamily: 'Inter', color: AppColors.body, height: 1.5);
   final scheme = ColorScheme.fromSeed(seedColor: AppColors.primary).copyWith(
     primary: AppColors.primary,
     surface: AppColors.surface,
@@ -65,10 +61,7 @@ ThemeData buildAppTheme() {
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
       fillColor: AppColors.surface,
-      contentPadding: const EdgeInsets.symmetric(
-        horizontal: Space.page,
-        vertical: Space.medium,
-      ),
+      contentPadding: const EdgeInsets.symmetric(horizontal: Space.page, vertical: Space.medium),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(Space.radius),
         borderSide: const BorderSide(color: AppColors.border),
@@ -83,9 +76,7 @@ ThemeData buildAppTheme() {
         backgroundColor: AppColors.primary,
         foregroundColor: AppColors.surface,
         minimumSize: const Size.fromHeight(Space.button),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(Space.radius),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(Space.radius)),
         textStyle: headings.copyWith(fontSize: 14),
       ),
     ),
@@ -95,10 +86,7 @@ ThemeData buildAppTheme() {
       centerTitle: false,
       elevation: 0,
     ),
-    dividerTheme: const DividerThemeData(
-      color: AppColors.border,
-      thickness: Space.hairline,
-    ),
+    dividerTheme: const DividerThemeData(color: AppColors.border, thickness: Space.hairline),
     visualDensity: VisualDensity.standard,
   );
 }

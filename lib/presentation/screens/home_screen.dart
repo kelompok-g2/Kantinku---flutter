@@ -40,13 +40,10 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text(
-              'Dimas Pratama',
-              style: Theme.of(context).textTheme.titleLarge,
-            ),
+            Text('Dimas Pratama', style: Theme.of(context).textTheme.titleLarge),
             Space.gap,
             const Text('Mahasiswa • Teknik Komputer ’21\nNIM 21060189'),
-            Space.block,
+            const SizedBox(height: Space.page),
             TextButton(
               onPressed: () {
                 Navigator.pop(context);
@@ -100,7 +97,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       'Mau makan apa di Kantin Fakultas Teknik hari ini?',
                       style: text.bodyMedium,
                     ),
-                    Space.block,
+                    const SizedBox(height: Space.page),
                     TextField(
                       onChanged: (value) {
                         setState(() => _query = value);
@@ -117,11 +114,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                     ),
-                    Space.block,
-                    HomeHero(
-                      onOrder: () => _open(CampusMenuRepository.menus.first),
-                    ),
-                    Space.block,
+                    const SizedBox(height: Space.page),
+                    HomeHero(onOrder: () => _open(CampusMenuRepository.menus.first)),
+                    const SizedBox(height: Space.page),
                     SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: Row(
@@ -135,22 +130,27 @@ class _HomeScreenState extends State<HomeScreen> {
                             ('Kopi Teh', '☕ Kopi Teh'),
                           ])
                             Padding(
-                              padding: const EdgeInsets.only(
-                                right: Space.small,
-                              ),
+                              padding: const EdgeInsets.only(right: Space.small),
                               child: ChoiceChip(
                                 label: Text(label),
+                                showCheckmark: false,
+                                selectedColor: AppColors.primary,
+                                backgroundColor: AppColors.surface,
+                                visualDensity: VisualDensity.compact,
+                                materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                                labelStyle: text.labelSmall?.copyWith(
+                                  color: _category == category ? AppColors.surface : AppColors.ink,
+                                ),
                                 selected: _category == category,
-                                onSelected: (_) =>
-                                    setState(() => _category = category),
+                                onSelected: (_) => setState(() => _category = category),
                               ),
                             ),
                         ],
                       ),
                     ),
-                    Space.block,
+                    const SizedBox(height: Space.page),
                     const StandStatus(),
-                    Space.block,
+                    const SizedBox(height: Space.page),
                     SectionHeading(
                       'Menu Populer Hari Ini 🔥',
                       action: 'Lihat Semua',
@@ -163,25 +163,18 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
-                            for (final menu in CampusMenuRepository.menus.take(
-                              3,
-                            ))
+                            for (final menu in CampusMenuRepository.menus.take(3))
                               Padding(
-                                padding: const EdgeInsets.only(
-                                  right: Space.medium,
-                                ),
-                                child: MenuCard(
-                                  menu: menu,
-                                  onTap: () => _open(menu),
-                                ),
+                                padding: const EdgeInsets.only(right: Space.medium),
+                                child: MenuCard(menu: menu, onTap: () => _open(menu)),
                               ),
                           ],
                         ),
                       ),
                     ),
-                    Space.block,
+                    const SizedBox(height: Space.page),
                     const CompletedOrderReview(),
-                    Space.block,
+                    const SizedBox(height: Space.page),
                     SectionHeading('Rekomendasi Untukmu', key: _menuKey),
                     Space.gap,
                     if (menus.isEmpty)
@@ -193,13 +186,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     for (final menu in menus)
                       Padding(
                         padding: const EdgeInsets.only(bottom: Space.medium),
-                        child: MenuCard(
-                          menu: menu,
-                          compact: true,
-                          onTap: () => _open(menu),
-                        ),
+                        child: MenuCard(menu: menu, compact: true, onTap: () => _open(menu)),
                       ),
-                    Space.block,
+                    const SizedBox(height: Space.page),
                   ],
                 ),
               ),
@@ -209,12 +198,13 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       bottomNavigationBar: HomeNavigation(
         onSelected: (index) {
-          if (index == 0)
+          if (index == 0) {
             _scroll.animateTo(
               0,
               duration: const Duration(milliseconds: 350),
               curve: Curves.easeOut,
             );
+          }
           if (index == 1) _showMenu();
           if (index == 2 || index == 3) context.push('/booking');
           if (index == 4) _profile();

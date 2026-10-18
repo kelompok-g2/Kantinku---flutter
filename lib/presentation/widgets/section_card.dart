@@ -7,19 +7,21 @@ class SectionCard extends StatelessWidget {
     super.key,
     required this.child,
     this.color = AppColors.surface,
+    this.padding = Space.padding,
   });
   final Widget child;
   final Color color;
+  final EdgeInsets padding;
   @override
   Widget build(BuildContext context) => Container(
     width: double.infinity,
-    padding: Space.padding,
+    padding: padding,
     decoration: BoxDecoration(
       color: color,
       borderRadius: BorderRadius.circular(Space.cardRadius),
       border: Border.all(color: AppColors.border, width: Space.hairline),
     ),
-    child: child,
+    child: Material(type: MaterialType.transparency, child: child),
   );
 }
 
@@ -31,9 +33,7 @@ class SectionHeading extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Row(
     children: [
-      Expanded(
-        child: Text(title, style: Theme.of(context).textTheme.titleMedium),
-      ),
+      Expanded(child: Text(title, style: Theme.of(context).textTheme.titleMedium)),
       if (action != null) TextButton(onPressed: onAction, child: Text(action!)),
     ],
   );
@@ -50,17 +50,8 @@ class StatusPill extends StatelessWidget {
   final Color color, background;
   @override
   Widget build(BuildContext context) => Container(
-    padding: const EdgeInsets.symmetric(
-      horizontal: Space.small,
-      vertical: Space.tiny,
-    ),
-    decoration: BoxDecoration(
-      color: background,
-      borderRadius: BorderRadius.circular(Space.pill),
-    ),
-    child: Text(
-      label,
-      style: Theme.of(context).textTheme.labelSmall?.copyWith(color: color),
-    ),
+    padding: const EdgeInsets.symmetric(horizontal: Space.small, vertical: Space.tiny),
+    decoration: BoxDecoration(color: background, borderRadius: BorderRadius.circular(Space.pill)),
+    child: Text(label, style: Theme.of(context).textTheme.labelSmall?.copyWith(color: color)),
   );
 }

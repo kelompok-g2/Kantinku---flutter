@@ -14,10 +14,7 @@ class SuccessScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final text = Theme.of(context).textTheme;
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Pesanan Berhasil'),
-        automaticallyImplyLeading: false,
-      ),
+      appBar: AppBar(title: const Text('Pesanan Berhasil'), automaticallyImplyLeading: false),
       body: SingleChildScrollView(
         padding: Space.padding,
         child: Column(
@@ -26,24 +23,13 @@ class SuccessScreen extends StatelessWidget {
             Container(
               width: Space.logo,
               height: Space.logo,
-              decoration: const BoxDecoration(
-                color: AppColors.mint,
-                shape: BoxShape.circle,
-              ),
-              child: const Icon(
-                Icons.check_rounded,
-                size: Space.button,
-                color: AppColors.green,
-              ),
+              decoration: const BoxDecoration(color: AppColors.mint, shape: BoxShape.circle),
+              child: const Icon(Icons.check_rounded, size: Space.button, color: AppColors.green),
             ),
             Space.block,
             const StatusPill('Pesanan berhasil dikonfirmasi'),
             Space.gap,
-            Text(
-              'Yeay, pesananmu masuk!',
-              style: text.headlineMedium,
-              textAlign: TextAlign.center,
-            ),
+            Text('Yeay, pesananmu masuk!', style: text.headlineMedium, textAlign: TextAlign.center),
             Space.gap,
             Text(
               'Stand sedang menyiapkan makananmu.\nTinggal tunggu, lalu ambil saat sudah siap.',
@@ -56,12 +42,7 @@ class SuccessScreen extends StatelessWidget {
                 children: [
                   Text('NOMOR PESANAN', style: text.labelSmall),
                   Space.gap,
-                  Text(
-                    '#KTK-89242',
-                    style: text.headlineLarge?.copyWith(
-                      color: AppColors.primary,
-                    ),
-                  ),
+                  Text('#KTK-89242', style: text.headlineLarge?.copyWith(color: AppColors.primary)),
                   const Divider(),
                   Text(order.menu.stand, style: text.titleMedium),
                   Space.gap,
@@ -73,10 +54,7 @@ class SuccessScreen extends StatelessWidget {
                   Space.gap,
                   const StatusPill('⏱ Estimasi 10–15 menit'),
                   Space.gap,
-                  Text(
-                    '${order.pickup} • ${order.payment}',
-                    style: text.bodySmall,
-                  ),
+                  Text('${order.pickup} • ${order.payment}', style: text.bodySmall),
                 ],
               ),
             ),
@@ -85,9 +63,7 @@ class SuccessScreen extends StatelessWidget {
             Space.block,
             const SectionCard(
               color: AppColors.pale,
-              child: Text(
-                'Tunjukkan nomor pesanan ini ke penjaga stand saat mengambil makananmu.',
-              ),
+              child: Text('Tunjukkan nomor pesanan ini ke penjaga stand saat mengambil makananmu.'),
             ),
             Space.block,
             PrimaryAction(

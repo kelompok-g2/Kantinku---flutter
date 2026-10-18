@@ -48,9 +48,7 @@ class DetailScreen extends StatelessWidget {
                         const Spacer(),
                         Text(
                           '★ ${order.menu.rating} (280+)',
-                          style: text.labelMedium?.copyWith(
-                            color: AppColors.brown,
-                          ),
+                          style: text.labelMedium?.copyWith(color: AppColors.brown),
                         ),
                       ],
                     ),
@@ -61,9 +59,7 @@ class DetailScreen extends StatelessWidget {
                     Space.gap,
                     Text(
                       rupiah(order.menu.price),
-                      style: text.headlineSmall?.copyWith(
-                        color: AppColors.primary,
-                      ),
+                      style: text.headlineSmall?.copyWith(color: AppColors.primary),
                     ),
                     Space.block,
                     Text('Tentang menu', style: text.titleMedium),
@@ -72,9 +68,7 @@ class DetailScreen extends StatelessWidget {
                     Space.block,
                     const SectionCard(
                       color: AppColors.pale,
-                      child: Text(
-                        '⏱ Siap dalam 10–15 menit\nAmbil di stand setelah pesanan siap.',
-                      ),
+                      child: Text('⏱ Siap dalam 10–15 menit\nAmbil di stand setelah pesanan siap.'),
                     ),
                     Space.block,
                     Text('Pilih level pedas', style: text.titleMedium),
@@ -93,16 +87,8 @@ class DetailScreen extends StatelessWidget {
                     Space.block,
                     Row(
                       children: [
-                        Expanded(
-                          child: Text(
-                            'Jumlah pesanan',
-                            style: text.titleMedium,
-                          ),
-                        ),
-                        QuantityControl(
-                          value: order.quantity,
-                          onChanged: order.changeQuantity,
-                        ),
+                        Expanded(child: Text('Jumlah pesanan', style: text.titleMedium)),
+                        QuantityControl(value: order.quantity, onChanged: order.changeQuantity),
                       ],
                     ),
                     Space.block,
@@ -116,8 +102,7 @@ class DetailScreen extends StatelessWidget {
           child: Padding(
             padding: Space.padding,
             child: PrimaryAction(
-              label:
-                  'Pesan Sekarang • ${rupiah(order.menu.price * order.quantity)}',
+              label: 'Pesan Sekarang • ${rupiah(order.menu.price * order.quantity)}',
               onPressed: () => context.push('/booking'),
               trailing: const Icon(Icons.arrow_forward),
             ),

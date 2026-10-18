@@ -3,11 +3,7 @@ import 'package:flutter/material.dart';
 import '../theme/app_theme.dart';
 
 class QuantityControl extends StatelessWidget {
-  const QuantityControl({
-    super.key,
-    required this.value,
-    required this.onChanged,
-  });
+  const QuantityControl({super.key, required this.value, required this.onChanged});
   final int value;
   final ValueChanged<int> onChanged;
   @override
