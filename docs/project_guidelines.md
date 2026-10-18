@@ -11,7 +11,7 @@ Panduan menetapkan alur kerja; pelaksanaannya dicatat di [checklist](pertemuan6_
 ## Setup laptop
 Clone repo ke folder pilihan, masuk ke root dan cek git status --short --branch.
 Jangan menyalin kredensial teman. Instal dependensi dari lockfile yang tersedia.
-SDK Dart harus memenuhi pubspec.yaml (saat ini ^3.13.3). Cek flutter --version dan flutter doctor, lalu flutter pub get dan flutter run -d chrome. Menu kosong adalah kondisi baseline. test/widget_test.dart masih menguji counter bawaan yang tidak ada pada UI KantinKu; jangan klaim tes lulus.
+SDK Dart harus memenuhi pubspec.yaml (saat ini ^3.13.3). Cek flutter --version dan flutter doctor, lalu flutter pub get dan flutter run -d chrome. Menu kosong adalah kondisi baseline Pertemuan 5. Pada branch tugas 7, UI menggunakan fixture lokal dan test/widget_test.dart menguji flow lima layar, bukan counter bawaan.
 
 ## Konvensi
 Gunakan nama deskriptif, perubahan kecil dan gaya kode bawaan proyek.
@@ -65,3 +65,14 @@ Artefak kedua repo terunggah; main/dev/feature terlihat; main benar-benar protec
 minimal satu PR direview anggota lain dan merged; screenshot aktual lengkap;
 PDF satu halaman memakai Prompt 2/3 asli; video tiga menit mengikuti skenario dosen;
 online text memakai permalink commit serta URL PR/video yang dapat diakses.
+
+## Pertemuan 7
+
+Gunakan feature/static-ui-screens dari dev. View baru berada di
+lib/presentation/screens; widget reusable di lib/presentation/widgets;
+state, model dan repository tetap terpisah sesuai MVVM. Baca
+docs/p07/design_reference.md dan docs/design_tokens.md sebelum mengubah UI.
+Lima layar memakai data lokal tanpa backend. Semua file Dart harus kurang
+dari 300 baris; jangan menaruh literal warna, font atau spacing di screen.
+Minimal delapan commit atomic dan PR ke dev dengan review anggota lain.
+Bukti Android harus berasal dari emulator/device yang benar-benar berjalan.
