@@ -1,0 +1,76 @@
+name: KantinKu Flutter checks
+
+on:
+  push:
+    branches: [dev]
+  pull_request:
+    branches: [dev]
+    paths: ['lib/**', 'test/**', 'integration_test/**', 'test_driver/**', 'pubspec.*', 'android/**', '.github/workflows/**']
+
+permissions:
+  contents: read
+
+concurrency:
+  group: flutter-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify-and-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      GRADLE_OPTS: -Dorg.gradle.daemon=false
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2
+        with:
+          flutter-version: '3.47.7'
+          channel: stable
+          cache: false
+      - name: Use Java 17
+        run: echo "JAVA_HOME=$JAVA_HOME_17_X64" >> "$GITHUB_ENV"
+      - name: Install dependencies
+        run: flutter pub get
+      - name: Check format
+        run: dart format --output=none --set-exit-if-changed lib test integration_test test_driver
+      - name: Analyze
+        run: flutter analyze
+      - name: Test order flow
+        run: flutter test
+      - name: Build Android emulator APK
+        run: flutter build apk --debug --target-platform android-x64
+      - name: Save APK
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: KantinKu-P07-Android-APK
+          path: build/app/outputs/flutter-apk/app-debug.apk
+          retention-days: 14
+          if-no-files-found: error
+      - name: Enable KVM on disposable runner
+        run: sudo chmod a+rw /dev/kvm
+      - name: Capture real Android evidence
+        uses: reactivecircus/android-emulator-runner@a421e43855164a8197daf9d8d40fe71c6996bb0d
+        with:
+          api-level: 29
+          arch: x86_64
+          target: default
+          profile: Nexus 5X
+          ram-size: 1536M
+          disk-size: 2048M
+          disable-animations: true
+          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none -camera-front none -no-snapshot
+          script: |
+            adb shell wm size 390x884
+            adb shell wm density 160
+            adb shell settings put system screen_off_timeout 2147483647
+            timeout --signal=INT 480s flutter drive --no-pub --driver=test_driver/evidence_driver.dart --target=integration_test/app_flow_test.dart -d emulator-5554
+      - name: Save Android screenshots and video
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: KantinKu-P07-Android-Evidence
+          path: artifacts/p07
+          retention-days: 14
+          if-no-files-found: warn

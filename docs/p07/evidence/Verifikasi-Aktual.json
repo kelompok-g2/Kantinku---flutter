@@ -1,0 +1,82 @@
+{
+  "date": "19 Oktober 2026",
+  "implementation_head": "38e3c513e5f63a3390dbca150584591993675ea7",
+  "implementation_commit_count": 25,
+  "base": "cc65f89f00375af61db6cc015f0be0a852e0cec0",
+  "pr": "https://github.com/kelompok-g2/Kantinku---flutter/pull/4",
+  "ci": "https://github.com/kelompok-g2/Kantinku---flutter/actions/runs/39102795924",
+  "ci_conclusion": "success",
+  "capture": {
+    "source_sha": "dd4bcf9136e3dfbcef7f3f3ca489b92b50a8f734",
+    "capture_method": "Android integration_test screenshots and adb screenrecord",
+    "automation": "Real Android emulator; navigation driven by integration test",
+    "android_api": "29",
+    "screenshots": [
+      "01-Login",
+      "02-Beranda",
+      "03-Detail-Menu",
+      "04-Form-Pemesanan",
+      "05-Pesanan-Berhasil",
+      "06-Kembali-Beranda",
+      "07-Beranda-Akhir"
+    ],
+    "record_exit": 0,
+    "pull_exit": 0
+  },
+  "video_seconds": 146.45,
+  "video_sha256": "7b6f12ebf486200d3afee456a30ce570ffa848d8c3839fd5dc1e289632810d3a",
+  "screenshots": [
+    {
+      "name": "01-Login.png",
+      "size": [
+        390,
+        836
+      ],
+      "bytes": 60563,
+      "sha256": "e3bfaa826a88273c54efcc17de32794cf3647d74ecb8c79e1d46f2a0255e0581"
+    },
+    {
+      "name": "02-Beranda.png",
+      "size": [
+        390,
+        836
+      ],
+      "bytes": 165077,
+      "sha256": "da2aed2c5cdfff66b1a3b28b1a835e4ad63d4ee4f1b0f95bfaa7f6f07d034436"
+    },
+    {
+      "name": "03-Detail-Menu.png",
+      "size": [
+        390,
+        836
+      ],
+      "bytes": 229924,
+      "sha256": "de33ca68f748131e0a8f7162fca8921551d89d9afbcb66e26d86d21c7e6deeb0"
+    },
+    {
+      "name": "04-Form-Pemesanan.png",
+      "size": [
+        390,
+        836
+      ],
+      "bytes": 69521,
+      "sha256": "e48aebc703b69e53e9e94d4d291d9374bd240c6acc8113eff6fbc6d0282bb69c"
+    },
+    {
+      "name": "05-Pesanan-Berhasil.png",
+      "size": [
+        390,
+        836
+      ],
+      "bytes": 54838,
+      "sha256": "dc4b1732139192b04b4813238de7adf986b331980aeebcf4f0ef90519214838a"
+    }
+  ],
+  "largest_dart_file": {
+    "lines": 240,
+    "path": "lib\\presentation\\screens\\login_screen.dart"
+  },
+  "review": "Menunggu anggota, sesuai arahan pengguna",
+  "merge": "Belum merge ke dev",
+  "drive_youtube": "Belum diunggah; video asli tersedia di GitHub"
+}

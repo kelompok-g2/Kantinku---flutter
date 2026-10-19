@@ -35,10 +35,7 @@ class _MenuViewState extends State<MenuView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Menu KantinKu'),
-        backgroundColor: Colors.green,
-      ),
+      appBar: AppBar(title: const Text('Menu KantinKu'), backgroundColor: Colors.green),
       body: Center(
         child: viewModel.isLoading
             ? const CircularProgressIndicator()

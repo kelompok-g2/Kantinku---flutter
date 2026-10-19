@@ -1,0 +1,18 @@
+TUGAS PROYEK PERTEMUAN 7 - KANTINKU
+Kelompok: G2 / Grup G - Kelompok Mobile
+Anggota (akun GitHub):
+1. muhammadrizhafahlevi-create
+2. andini06122005-a11y
+3. nasyifaramadhani-gif
+
+Repo Flutter: https://github.com/kelompok-g2/Kantinku---flutter
+Pull Request: https://github.com/kelompok-g2/Kantinku---flutter/pull/4
+Branch: feature/static-ui-screens -> dev
+Jumlah commit pada PR setelah arsip bukti: 26 (25 commit implementasi pada snapshot 38e3c513e5f6 dan 1 commit paket bukti).
+Video demo asli (146.4 detik): https://github.com/kelompok-g2/Kantinku---flutter/raw/refs/heads/feature/static-ui-screens/docs/p07/evidence/Video-Demo-KantinKu.mp4
+Verifikasi Android: https://github.com/kelompok-g2/Kantinku---flutter/actions/runs/39102795924
+Figma: https://www.figma.com/design/KuWGYTKH8PwGjCSSv8g7X6/Untitled
+
+Hasil: lima layar statis dan alur kembali ke Beranda berjalan, memakai go_router, fixture lokal dan widget reusable. Format, analyzer, 5 tes unit/widget, build APK dan integration test Android lulus.
+Status review: menunggu anggota; pengguna meminta review ditunda karena anggota sedang tidak aktif. Belum merge ke dev. Pemeriksaan clone-run dev setelah merge belum dijalankan.
+Status tautan video: video asli tersedia di GitHub. Belum diunggah ke Drive/YouTube; URL layanan tersebut perlu ditambahkan sebelum pengumpulan final LMS.

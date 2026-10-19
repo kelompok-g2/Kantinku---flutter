@@ -1,30 +1,57 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-
 import 'package:kantinku_flutter/main.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const KantinKuApp());
-
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
-
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
-
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+  TestWidgetsFlutterBinding.ensureInitialized();
+  setUpAll(() async {
+    for (final (family, file) in [
+      ('Inter', 'Inter.ttf'),
+      ('PlusJakartaSans', 'PlusJakartaSans.ttf'),
+    ]) {
+      await (FontLoader(family)..addFont(rootBundle.load('assets/fonts/$file'))).load();
+    }
   });
+  for (final width in [320.0, 390.0]) {
+    testWidgets('Login validates fields and complete order flow works at width $width', (
+      tester,
+    ) async {
+      final semantics = tester.ensureSemantics();
+      try {
+        tester.view.physicalSize = Size(width, 884);
+        tester.view.devicePixelRatio = 1;
+        addTearDown(tester.view.resetPhysicalSize);
+        addTearDown(tester.view.resetDevicePixelRatio);
+        await tester.pumpWidget(const KantinKuApp());
+        await tester.pumpAndSettle();
+        await tester.ensureVisible(find.text('Masuk ke KantinKu'));
+        await tester.tap(find.text('Masuk ke KantinKu'));
+        await tester.pumpAndSettle();
+        expect(find.text('Isi email atau NIM dulu.'), findsOneWidget);
+        await tester.enterText(find.byType(TextFormField).at(0), '21060189');
+        await tester.enterText(find.byType(TextFormField).at(1), 'kantinku123');
+        await tester.ensureVisible(find.text('Masuk ke KantinKu'));
+        await tester.tap(find.text('Masuk ke KantinKu'));
+        await tester.pumpAndSettle();
+        expect(find.text('Halo, Dimas Pratama! 👋'), findsOneWidget);
+        await tester.tap(find.bySemanticsLabel('Pesan Sekarang'));
+        await tester.pumpAndSettle();
+        expect(find.text('Detail Menu'), findsOneWidget);
+        await tester.tap(find.textContaining('Pesan Sekarang •'));
+        await tester.pumpAndSettle();
+        expect(find.text('Konfirmasi Pesanan'), findsOneWidget);
+        await tester.tap(find.text('Konfirmasi & Bayar Pesanan'));
+        await tester.pumpAndSettle();
+        expect(find.text('Yeay, pesananmu masuk!'), findsOneWidget);
+        await tester.ensureVisible(find.text('Kembali ke Beranda'));
+        await tester.tap(find.text('Kembali ke Beranda'));
+        await tester.pumpAndSettle();
+        expect(find.text('Halo, Dimas Pratama! 👋'), findsOneWidget);
+        expect(tester.takeException(), isNull);
+      } finally {
+        semantics.dispose();
+      }
+    });
+  }
 }

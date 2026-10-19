@@ -1,0 +1,542 @@
+[
+  {
+    "screen": "login",
+    "name": "imgLogoKantinKu",
+    "file": "login_00.png"
+  },
+  {
+    "screen": "login",
+    "name": "imgContainer",
+    "file": "login_01.svg"
+  },
+  {
+    "screen": "login",
+    "name": "imgContainer1",
+    "file": "login_02.svg"
+  },
+  {
+    "screen": "login",
+    "name": "imgContainer2",
+    "file": "login_03.svg"
+  },
+  {
+    "screen": "login",
+    "name": "imgContainer3",
+    "file": "login_04.svg"
+  },
+  {
+    "screen": "login",
+    "name": "imgContainer4",
+    "file": "login_05.svg"
+  },
+  {
+    "screen": "login",
+    "name": "imgContainer5",
+    "file": "login_06.svg"
+  },
+  {
+    "screen": "login",
+    "name": "imgContainer6",
+    "file": "login_07.svg"
+  },
+  {
+    "screen": "login",
+    "name": "imgContainer7",
+    "file": "login_08.svg"
+  },
+  {
+    "screen": "login",
+    "name": "imgContainer8",
+    "file": "login_09.svg"
+  },
+  {
+    "screen": "login",
+    "name": "imgContainer9",
+    "file": "login_10.svg"
+  },
+  {
+    "screen": "login",
+    "name": "imgContainer10",
+    "file": "login_11.svg"
+  },
+  {
+    "screen": "home",
+    "name": "imgAb6AXuDo9Nz8YLxYieYk3PgkRxyzthLuTaVhc8Ss6Mv2Za9UcYzndbSwUYnUny7Xk8FjHo6QgwNQjSOoqk7YLw2JIu7SjZ0BMrNbaFClr1YfTNdLuy0TzSjK18DinIeq1PZwY9EAGkb05YzhAecx8F6Ckqgme6ZjYafMaPVHwuDm424Yl1IjFk4IndQk5VhisJ33Kozb6NeZi7OClPqtxnzHeNhpC776NBzqqauzuQvBniFjsM0",
+    "file": "home_00.png"
+  },
+  {
+    "screen": "home",
+    "name": "imgAb6AXuCgpLwV8FasbEAwLiF7IYVqEf83RtaCbTpzQvHJsWbNAgKv9Ue4ROgXaIKGrkqlYuSfwxNbLDqEe9GNtS2AEabmlbq4ZuqYcvWhJcYsGdIo2JNuk6UghiDvRe7PbWmnvTpCyqydzO2DeqSoJzGnNhLpmMpnmHcSnVaYPqhn8D3MmDhr9138BKjOiSzaWhKYoT6Rwx9BAk9Ir0PxVpDc3ErSbWyii5JaNza98C7Iiak",
+    "file": "home_01.png"
+  },
+  {
+    "screen": "home",
+    "name": "imgAb6AXuDnM3Cir4GqqwshFj7VFt0EAhB2EVlFs6TDfghWzoPlKtwGYBSrv5E4WrPKaOuT3OaZse8VPum5HOPu9XvTqcCoOiLDpcgVaysk1MdSixxcMkB8AzJxf47AimeLlpisk0IPPswPMupGiOljJcZuZe19DoCnZjBgsAYoOyL66SIaf9DnfZ385C4JzOgK6WWIs1TGxeKOfUgxyhxrxLlJyplkMp0XuXykaK5IEjgzBuj3DaOXv",
+    "file": "home_02.png"
+  },
+  {
+    "screen": "home",
+    "name": "imgAb6AXuBoV1TSmRQqcG1VcVsWoGDce2Jdn1YgcvFjH2B7Z8KbpIzny1Krer4XDjHvlBrKdTsj9WHc3V4ScSgtiFHrMvmwAblyKuxhGvOw1AXoAbZcKiZyzgJjaOyuWeY8HtaoxvkEKsPBzcCZoOv18YezUn7ZHqzjXaGxFbP0Eg6E28RYlMO70LbFmEns2YwqBnE1X1XlMe8POcG1Sj8R9V2CYxd2DClGhEysnUqTrJNGeajDlRza",
+    "file": "home_03.png"
+  },
+  {
+    "screen": "home",
+    "name": "imgAb6AXuDzPjMfbJc2T4N9OP0Pz2SjjMuiRdmy2BQHcAMg3XxnSjLchBu4AL2FtK0U1A06EywmwIbVVexhwM4U9Cg4ERsTv472GDuM6Ib6CjZBokxegZz7UcxYkNu1Zp9Jb2Mt3VFddon5WO6AdmFQcir2Is36JcmK7WglSptdrShkaxIxm6OYdu4DnJtLyzAaEv59Dj1Hr7FMjlhyVGQeKvNy3KAbPT2Mkwh2LX3CbMyoxw8PEzSy",
+    "file": "home_04.png"
+  },
+  {
+    "screen": "home",
+    "name": "imgAb6AXuAd1KfTGbaTb1OCvLs6XCxWouqdzdxQi7CdXEatGdBf0Bu97EBq93De0EA2IlRwPzkbYlBeAk4CGyBmeWoL38EuH8Skev1A24JO46If3QeYi3K3BccwMy3MJc75BEkODqKr9Qx1JcLv8BFvYfRn6UkVUeVsHuCr1KLjprlM3UlUcTAmfaHYluLs0MkzgKi9NehUrZzVwhEzWf2L1UbJv75thPyjEcsbMtxy38SMphtkPugBcl",
+    "file": "home_05.png"
+  },
+  {
+    "screen": "home",
+    "name": "imgAb6AXuA3ZjqEiscchzYgsPjecOl5BhidPHv9MoYrcv7U45KR4LivDdHoRsM3IyqLtm4F9XbAjWiHE4CPtqoCmB4QXLmuizi2WNwXp9GUpCsRmnTqGuH766MV9KNztbUSxS9VAsmCx0VbcAin6Ymp4KVvyjvJa1TkIshfz8EvXpRpYiRifD3TBa9K6W2AKfoE6Ax81I7YyKxGrNxeClByvvjmpaSuboBaPcCodaylBZycezWgqYv7",
+    "file": "home_06.png"
+  },
+  {
+    "screen": "home",
+    "name": "imgAb6AXuD15X7DV43UfjLmV6TabpjRtDjM30Rd3Nn5HcMvy1HqSXbSlWxXuDqOjIg1MkXVy2O8ERm6Wmgh6Tj8BByLrfnRjE7Ak87QpNlOsctQxS0LeayeB57UyMr5M8KXd8IIBz4IFvZlRml5Yuh0O4DswsBg3El1IlBxesU5EAiHa3BYnpY43HXe8C8CwufMd0Hb5QbBbx1UjBoIbslk2EAfcujr6TRrUuItiuEfSQnQGx2Rx7VrTHv",
+    "file": "home_07.png"
+  },
+  {
+    "screen": "home",
+    "name": "imgAb6AXuBbc1Ki450U3L0VqEkJwETx6NGm5EfiiLnVa6KdZotECm8N7BCk51Ra1GsaUy9PKEzsxMdvTnSaAcJmtbS5BE5JLyIZfr8BhkJusydMwia0UvNNwfEb6V2I1MYnf3QflFthoGhC7GkmkzMjOiYcyuPvxVxvFxqB1QmGlgOhNp9NlDy0HcDwByl68IwpSOrmAsFi484Zv1JLju78AZmef2HQF5L8EcP1Fk25HrYvHhn8Dux",
+    "file": "home_08.png"
+  },
+  {
+    "screen": "home",
+    "name": "imgLogoKantinKu",
+    "file": "home_09.png"
+  },
+  {
+    "screen": "home",
+    "name": "imgProfile",
+    "file": "home_10.png"
+  },
+  {
+    "screen": "home",
+    "name": "imgContainer",
+    "file": "home_11.svg"
+  },
+  {
+    "screen": "home",
+    "name": "imgContainer1",
+    "file": "home_12.svg"
+  },
+  {
+    "screen": "home",
+    "name": "imgContainer2",
+    "file": "home_13.svg"
+  },
+  {
+    "screen": "home",
+    "name": "imgContainer3",
+    "file": "home_14.svg"
+  },
+  {
+    "screen": "home",
+    "name": "imgContainer4",
+    "file": "home_15.svg"
+  },
+  {
+    "screen": "home",
+    "name": "imgContainer5",
+    "file": "home_16.svg"
+  },
+  {
+    "screen": "home",
+    "name": "imgContainer6",
+    "file": "home_17.svg"
+  },
+  {
+    "screen": "home",
+    "name": "imgMargin",
+    "file": "home_18.svg"
+  },
+  {
+    "screen": "home",
+    "name": "imgContainer7",
+    "file": "home_19.svg"
+  },
+  {
+    "screen": "home",
+    "name": "imgContainer8",
+    "file": "home_20.svg"
+  },
+  {
+    "screen": "home",
+    "name": "imgContainer9",
+    "file": "home_21.svg"
+  },
+  {
+    "screen": "home",
+    "name": "imgContainer10",
+    "file": "home_22.svg"
+  },
+  {
+    "screen": "home",
+    "name": "imgContainer11",
+    "file": "home_23.svg"
+  },
+  {
+    "screen": "home",
+    "name": "imgContainer12",
+    "file": "home_24.svg"
+  },
+  {
+    "screen": "home",
+    "name": "imgContainer13",
+    "file": "home_25.svg"
+  },
+  {
+    "screen": "home",
+    "name": "imgContainer14",
+    "file": "home_26.svg"
+  },
+  {
+    "screen": "home",
+    "name": "imgContainer15",
+    "file": "home_27.svg"
+  },
+  {
+    "screen": "home",
+    "name": "imgContainer16",
+    "file": "home_28.svg"
+  },
+  {
+    "screen": "home",
+    "name": "imgContainer17",
+    "file": "home_29.svg"
+  },
+  {
+    "screen": "home",
+    "name": "imgContainer18",
+    "file": "home_30.svg"
+  },
+  {
+    "screen": "home",
+    "name": "imgContainer19",
+    "file": "home_31.svg"
+  },
+  {
+    "screen": "home",
+    "name": "imgContainer20",
+    "file": "home_32.svg"
+  },
+  {
+    "screen": "home",
+    "name": "imgContainer21",
+    "file": "home_33.svg"
+  },
+  {
+    "screen": "home",
+    "name": "imgContainer22",
+    "file": "home_34.svg"
+  },
+  {
+    "screen": "home",
+    "name": "imgContainer23",
+    "file": "home_35.svg"
+  },
+  {
+    "screen": "home",
+    "name": "imgContainer24",
+    "file": "home_36.svg"
+  },
+  {
+    "screen": "home",
+    "name": "imgContainer25",
+    "file": "home_37.svg"
+  },
+  {
+    "screen": "home",
+    "name": "imgContainer26",
+    "file": "home_38.svg"
+  },
+  {
+    "screen": "home",
+    "name": "imgContainer27",
+    "file": "home_39.svg"
+  },
+  {
+    "screen": "home",
+    "name": "imgContainer28",
+    "file": "home_40.svg"
+  },
+  {
+    "screen": "home",
+    "name": "imgContainer29",
+    "file": "home_41.svg"
+  },
+  {
+    "screen": "home",
+    "name": "imgContainer30",
+    "file": "home_42.svg"
+  },
+  {
+    "screen": "catalog",
+    "name": "imgAb6AXuDwEPin45K95IuSd5ZMy1T7T20JbkEmA9EKhKgc9AkRmPpDa5Y9FasNRrZaYs2OHcgdfKmpoi3IW0T9E8NUVNa529LgHdGg1T4P3Bo8RnM6Dii18VjQqTaXbKytGvdc63LHcRyLUooe5MVTcF7ThycyWkgkvNhPqjlTosTpxwq3XiAbDyywfLchd8FMhCBtFnigTw03NirfPabcfUqGucBiBIghvrGLww8IwiGoUXtLKlRk",
+    "file": "catalog_00.png"
+  },
+  {
+    "screen": "catalog",
+    "name": "imgAb6AXuBhUL6Mos3NMMu1AP2KDgudCyuoBgFak0W81NeM27FgM9WcBkX5Y2JPxpCEn0I17Xz0Ig4PpUzZeUu1HxRh4JTlRZnuG4RAv1KpSs7CMjI3LUI5NL9NjrMa0CahXY0UlfAf7S4Wb6ZyR9LmeXskn8GpNtHaNbSeGml33RezyhY67ScgiA8J2OqOo4FfDd3H5FV3DPvfonEkNObyhEiYEoKM6AfGdH4WuZlOnh3KA",
+    "file": "catalog_01.png"
+  },
+  {
+    "screen": "catalog",
+    "name": "imgAb6AXuBfOxkKSoEybJaOjPC7Xy5IHo2NDkTzBBxzc91Paz0HhsEv7Zh5QO9VjFghEmEkCnpd72Bdb6BwHoaJeKzVyH2EhoqXIzadKkxmlEnVJvufoIyCf1HWuyKdQay2XZerAuZ2LsWbspBg9IgoWFtVjhxpaMH5RtAoZm9QLdnvAj7N3JlBytdFbJiuFeqjdPdGw5GnPzSutFdSvx6PBKtB9RMhwaiSX9M52TcwM5Zj6IacWcpC",
+    "file": "catalog_02.png"
+  },
+  {
+    "screen": "catalog",
+    "name": "imgAb6AXuC7RTfnj6SKvXjRvu04U97F4J1SMsBucxSiYzZeFzPd1No5ZOr0NDFkMlRg4TvtO2IlZEt9I8J2WPrcjUt0BJyqyKkJ6B5Jybie8FKVt4OsIapG7KnI6DQ7XMtQ9Nh49UGz9XWSlcPDlV27KgrH9LxyuN0PqX7IZ24IwSil8DjmC2BDmapjmkb0TnHe8NwU7YklyC51LbxAQh29EJmViNb8LtNhrSb2EDqvUNujmZyNHcj7Xkm1U",
+    "file": "catalog_03.png"
+  },
+  {
+    "screen": "catalog",
+    "name": "imgAb6AXuCkfeZ832EsKcNGgpHdoRweYfzLDfiQgHothNlhZigUwdzbB6YydLStnCHtsFZyPsTip3WtlHfwacChoyYiOvUfRPjWdtPrQp6GsLa4Yq9Igc49PvKipga5Zav9Q6KmBdt8DcLOqNlxApzFh5C91MY4PlEf46Fedb7DSoa7FGx4H6EMzXqbgMpkMacYlUojiKGh9PHzewpmfyXczTEumSf0PL8RrdbsMqCBxXhZw1AIgZWdXGq",
+    "file": "catalog_04.png"
+  },
+  {
+    "screen": "catalog",
+    "name": "imgAb6AXuAdN9WI7ANCxWoPjLoFt5DhnWdnvEgEgur1Mvu6Qei2HjfLhBTl4GcIg2KHljRTo50L9U1Tl3Fqp0DbqzjS7OTjKjFvoc69XvotAg4GPwTQxJpJbscl3AqYKkdWbIn3WMhZaIaRLxUwXbsOg7OvXocJI9R4JbfFRuKcZtFpoEhiyrYsb1YvePkNWxF0O01KXrEmBkBzPwpHjdIRaE91YbA7SASV32IJxJBaD774XwbvjJy5",
+    "file": "catalog_05.png"
+  },
+  {
+    "screen": "catalog",
+    "name": "imgAb6AXuAu4CyY5YyzwPzNq2Oez0GtDuVbaJpSoRSwFzShXfS9YAoNz4ZiqEcbsL3TA2HMu7WaHWqSmru1X5VPTeV3SCUx90Snh7Cdn6XJjIzIgGQeDiNgP2Dvlvb1Oot7S83Mxw7NBy0Kmi9M2Lf9QuXqhkEnsAu1Vympcaoggw4CaX6QgNbDpiCiXgs2Bs3MiS7SowCcNrUtmhtn6LkL3302Roe3Cc94Mty0TooFaQ9FwKm1Z1",
+    "file": "catalog_06.png"
+  },
+  {
+    "screen": "catalog",
+    "name": "imgAb6AXuDFz5Xocfx34D74OVzDrZ2PZdRKMjVC9Y357N5SlOmZ5BXQktkJJpCf8SiTa5Yq9TfUyS3C5OubwPvYb9DvR7PUCfKaHy75GXOnlRwztEo5JbHyZgYqcNdcyekwE4Ix2ZobDiKNnTfFMxA264GfsigtKVxMo6W9EJTyJww8JUOgs2XBtHxFf5Mgo7KYkV5Lrp417JwaijWieKZuTR9VywNy4Ys75Oik90IFeo02GnhWayG",
+    "file": "catalog_07.png"
+  },
+  {
+    "screen": "catalog",
+    "name": "imgLogoKantinKu",
+    "file": "catalog_08.png"
+  },
+  {
+    "screen": "catalog",
+    "name": "imgProfile",
+    "file": "catalog_09.png"
+  },
+  {
+    "screen": "catalog",
+    "name": "imgContainer",
+    "file": "catalog_10.svg"
+  },
+  {
+    "screen": "catalog",
+    "name": "imgContainer1",
+    "file": "catalog_11.svg"
+  },
+  {
+    "screen": "catalog",
+    "name": "imgContainer2",
+    "file": "catalog_12.svg"
+  },
+  {
+    "screen": "catalog",
+    "name": "imgContainer3",
+    "file": "catalog_13.svg"
+  },
+  {
+    "screen": "catalog",
+    "name": "imgContainer4",
+    "file": "catalog_14.svg"
+  },
+  {
+    "screen": "catalog",
+    "name": "imgContainer5",
+    "file": "catalog_15.svg"
+  },
+  {
+    "screen": "catalog",
+    "name": "imgContainer6",
+    "file": "catalog_16.svg"
+  },
+  {
+    "screen": "catalog",
+    "name": "imgContainer7",
+    "file": "catalog_17.svg"
+  },
+  {
+    "screen": "catalog",
+    "name": "imgContainer8",
+    "file": "catalog_18.svg"
+  },
+  {
+    "screen": "catalog",
+    "name": "imgContainer9",
+    "file": "catalog_19.svg"
+  },
+  {
+    "screen": "catalog",
+    "name": "imgContainer10",
+    "file": "catalog_20.svg"
+  },
+  {
+    "screen": "catalog",
+    "name": "imgContainer11",
+    "file": "catalog_21.svg"
+  },
+  {
+    "screen": "catalog",
+    "name": "imgContainer12",
+    "file": "catalog_22.svg"
+  },
+  {
+    "screen": "catalog",
+    "name": "imgContainer13",
+    "file": "catalog_23.svg"
+  },
+  {
+    "screen": "catalog",
+    "name": "imgContainer14",
+    "file": "catalog_24.svg"
+  },
+  {
+    "screen": "catalog",
+    "name": "imgContainer15",
+    "file": "catalog_25.svg"
+  },
+  {
+    "screen": "catalog",
+    "name": "imgContainer16",
+    "file": "catalog_26.svg"
+  },
+  {
+    "screen": "catalog",
+    "name": "imgContainer17",
+    "file": "catalog_27.svg"
+  },
+  {
+    "screen": "catalog",
+    "name": "imgContainer18",
+    "file": "catalog_28.svg"
+  },
+  {
+    "screen": "confirmation",
+    "name": "imgAb6AXuCrTy7Wq3LbSsaV83QqpAosChPLx5Yy2ODiQpJVr0Ht22DLpEvNw6RTu7Dy98E9Ga4ZlKxvSr1HiW5ZepaK0YGcfCtAitv8KfzEi91Yhc4HWVwq67Pz993RrbwfXjeuNc1AvjGsw1P10TnHMpgU0Eysm3JiL0SpwOkOniOgQxYwdWsm5OaRJqEgIamphJf7USeZZrKvPpRnpc3Yo8W7Azofag5TWqVc7ZjZVfzx3U7Xm4Abd",
+    "file": "confirmation_00.png"
+  },
+  {
+    "screen": "confirmation",
+    "name": "imgContainer",
+    "file": "confirmation_01.svg"
+  },
+  {
+    "screen": "confirmation",
+    "name": "imgContainer1",
+    "file": "confirmation_02.svg"
+  },
+  {
+    "screen": "confirmation",
+    "name": "imgContainer2",
+    "file": "confirmation_03.svg"
+  },
+  {
+    "screen": "confirmation",
+    "name": "imgContainer3",
+    "file": "confirmation_04.svg"
+  },
+  {
+    "screen": "confirmation",
+    "name": "imgContainer4",
+    "file": "confirmation_05.svg"
+  },
+  {
+    "screen": "confirmation",
+    "name": "imgContainer5",
+    "file": "confirmation_06.svg"
+  },
+  {
+    "screen": "confirmation",
+    "name": "imgContainer6",
+    "file": "confirmation_07.svg"
+  },
+  {
+    "screen": "confirmation",
+    "name": "imgContainer7",
+    "file": "confirmation_08.svg"
+  },
+  {
+    "screen": "confirmation",
+    "name": "imgContainer8",
+    "file": "confirmation_09.svg"
+  },
+  {
+    "screen": "confirmation",
+    "name": "imgContainer9",
+    "file": "confirmation_10.svg"
+  },
+  {
+    "screen": "confirmation",
+    "name": "imgContainer10",
+    "file": "confirmation_11.svg"
+  },
+  {
+    "screen": "confirmation",
+    "name": "imgContainer11",
+    "file": "confirmation_12.svg"
+  },
+  {
+    "screen": "confirmation",
+    "name": "imgContainer12",
+    "file": "confirmation_13.svg"
+  },
+  {
+    "screen": "confirmation",
+    "name": "imgContainer13",
+    "file": "confirmation_14.svg"
+  },
+  {
+    "screen": "confirmation",
+    "name": "imgContainer14",
+    "file": "confirmation_15.svg"
+  },
+  {
+    "screen": "confirmation",
+    "name": "imgContainer15",
+    "file": "confirmation_16.svg"
+  },
+  {
+    "screen": "confirmation",
+    "name": "imgContainer16",
+    "file": "confirmation_17.svg"
+  },
+  {
+    "screen": "confirmation",
+    "name": "imgContainer17",
+    "file": "confirmation_18.svg"
+  },
+  {
+    "screen": "confirmation",
+    "name": "imgContainer18",
+    "file": "confirmation_19.svg"
+  },
+  {
+    "screen": "confirmation",
+    "name": "imgContainer19",
+    "file": "confirmation_20.svg"
+  },
+  {
+    "screen": "confirmation",
+    "name": "imgContainer20",
+    "file": "confirmation_21.svg"
+  },
+  {
+    "screen": "confirmation",
+    "name": "imgContainer21",
+    "file": "confirmation_22.svg"
+  },
+  {
+    "screen": "confirmation",
+    "name": "imgContainer22",
+    "file": "confirmation_23.svg"
+  }
+]
