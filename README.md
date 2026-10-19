@@ -6,6 +6,10 @@ Login -> Beranda -> Detail Menu -> Form Pemesanan -> Pesanan Berhasil -> Beranda
 [Pull Request tugas 7](https://github.com/kelompok-g2/Kantinku---flutter/pull/4)
 ditujukan ke branch dev dari feature/static-ui-screens.
 
+[Unduh paket bukti tugas 7](docs/p07/Paket-Tugas-7-KantinKu.zip): lima screenshot
+Android, PDF Git/PR dan checklist, video demo, serta online text.
+[Lihat isi dan hasil verifikasi](docs/p07/README.md).
+
 ## Menjalankan
 
 Gunakan Flutter 3.47.7 / Dart 3.13.5 atau versi yang memenuhi pubspec.yaml.
